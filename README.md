@@ -1,2 +1,0 @@
-# youngog.github.io
-youngog
