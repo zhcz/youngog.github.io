@@ -68,7 +68,6 @@
 	<body>
 		
 	<div class="fh5co-loader"></div>
-	
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
@@ -125,7 +124,7 @@
 							<h1>Joefrey &amp; Sheila</h1>
 							<h2>We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+<!--                            <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>-->
 						</div>
 					</div>
 				</div>
@@ -181,34 +180,35 @@
 						<div class="col-md-10 col-md-offset-1">
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Main Ceremony</h3>
+									<h3>典礼</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>4:00 PM</span>
-										<span>6:00 PM</span>
+										<span>7:00 AM</span>
+										<span>8:00 AM</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
 										<span>Friday 5</span>
 										<span>October, 2018</span>
 									</div>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<p>注：典礼定与2018年10月5号上午7点至8点钟进行，届时，望诸位亲朋准时参加。</p>
+									<p>注：典礼定与2018年10月5号上午7点至8点钟进行，届时，望诸位亲朋准时参加。</p>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Wedding Party</h3>
+									<h3>婚宴</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>7:00 PM</span>
-										<span>12:00 AM</span>
+										<span>9:00 AM</span>
+										<span>10:00 AM</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
 										<span>Friday 5</span>
 										<span>October, 2018</span>
 									</div>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<p>婚宴定于2018年10月5号上午9点准时开始，</p>
 								</div>
 							</div>
 						</div>
@@ -618,8 +618,19 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
+    var date = '2018-10-05 05:59:00';
+    date = date.substring(0,19);
+    date = date.replace(/-/g,'/');
+    var timestamp = new Date(date).getTime();
+    document.write(timestamp);
+
+
+
+    var d = new Date(timestamp);
+    console.log(timestamp);
+    console.log(new Date().getTime());
+     console.log(d);
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),
